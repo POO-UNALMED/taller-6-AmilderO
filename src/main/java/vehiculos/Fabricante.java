@@ -1,8 +1,10 @@
 package vehiculos;
-
+import java.util.ArrayList;
 public class Fabricante {
 	
 	// Attributes.
+	static ArrayList<Fabricante> totalFabricantes = new ArrayList<Fabricante>(); 
+	private ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
 	private String nombre;
 	private Pais pais;
 	
@@ -10,6 +12,8 @@ public class Fabricante {
 	public Fabricante(String nombre, Pais pais) {
 		this.nombre = nombre;
 		this.pais = pais;
+		pais.addFabricante(this);
+		totalFabricantes.add(this);
 	}
 	
 	// Getters.
@@ -19,6 +23,9 @@ public class Fabricante {
 	public Pais getPais() {
 		return pais;
 	}
+	public int getVehiculos() {
+		return vehiculos.size();
+	}
 	
 	// Setters.
 	public void setNombre(String nom) {
@@ -26,5 +33,19 @@ public class Fabricante {
 	}
 	public void setPais(Pais lugar) {
 		pais = lugar;
+	}
+	
+	// Methods.
+	public void addVehiculo(Vehiculo vel) {
+		vehiculos.add(vel);
+	}
+	public static Fabricante fabricaMayorVentas() {
+		Fabricante mayor = totalFabricantes.get(0);
+		for(int i = 1; i < totalFabricantes.size(); i++) {
+			if(totalFabricantes.get(i).vehiculos.size() > mayor.vehiculos.size()) {
+				mayor = totalFabricantes.get(i);
+			}
+		}
+		return mayor;
 	}
 }

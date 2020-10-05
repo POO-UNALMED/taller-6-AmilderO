@@ -19,6 +19,7 @@ public class Automovil extends Vehiculo {
 		traccion = "FWD";
 		masVehiculos();
 		masAutomoviles();
+		fabricante.addVehiculo(this);
 	}
 	
 	// Getters.

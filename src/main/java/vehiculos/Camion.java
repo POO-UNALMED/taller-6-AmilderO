@@ -18,6 +18,7 @@ public class Camion extends Vehiculo {
 		traccion = "4X2";
 		masVehiculos();
 		masCamiones();
+		fabricante.addVehiculo(this);
 	}
 	
 	// Getters.

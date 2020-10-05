@@ -3,6 +3,7 @@ package vehiculos;
 public class Camioneta extends Vehiculo {
 
 	// Attributes.
+	
 	private boolean volco;
 	static int cantidadCamionetas;
 	
@@ -19,6 +20,7 @@ public class Camioneta extends Vehiculo {
 		traccion = "4X4";
 		masVehiculos();
 		masCamionetas();
+		fabricante.addVehiculo(this);
 	}
 	
 	// Getters. 
