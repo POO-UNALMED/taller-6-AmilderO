@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Fabricante {
 	
 	// Attributes.
-	static ArrayList<Fabricante> totalFabricantes = new ArrayList<Fabricante>(); 
+	static ArrayList<Fabricante> totalFabricantes = new ArrayList<Fabricante>();
 	private ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
 	private String nombre;
 	private Pais pais;
@@ -48,7 +48,5 @@ public class Fabricante {
 		}
 		return mayor;
 	}
-	static {
-		new Fabricante("F0", new Pais("P0"));
-	}
+	
 }
