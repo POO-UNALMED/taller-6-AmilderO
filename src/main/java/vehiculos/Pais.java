@@ -12,6 +12,7 @@ public class Pais {
 	// Constructor.
 	public Pais(String nombre) {
 		this.nombre = nombre;
+		paises.add(this);
 	}
 	
 	// Getters.
@@ -32,6 +33,7 @@ public class Pais {
 	public static Pais paisMasVendedor() {
 		Pais mayor = paises.get(0);
 		int vmayor = 0;
+		
 		
 		
 		for(int i = 0; i < paises.size(); i++) {
