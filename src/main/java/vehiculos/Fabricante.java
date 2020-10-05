@@ -12,7 +12,7 @@ public class Fabricante {
 	public Fabricante(String nombre, Pais pais) {
 		this.nombre = nombre;
 		this.pais = pais;
-		pais.addFabricante(this);
+		this.pais.addFabricante(this);
 		totalFabricantes.add(this);
 	}
 	
