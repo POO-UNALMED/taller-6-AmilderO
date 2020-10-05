@@ -33,6 +33,7 @@ public class Fabricante {
 	}
 	public void setPais(Pais lugar) {
 		pais = lugar;
+		pais.addFabricante(this);
 	}
 	
 	// Methods.

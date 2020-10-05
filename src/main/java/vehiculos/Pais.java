@@ -30,7 +30,7 @@ public class Pais {
 	}
 	
 	public static Pais paisMasVendedor() {
-		Pais mayor = null;
+		Pais mayor = paises.get(0);
 		int vmayor = 0;
 		
 		
