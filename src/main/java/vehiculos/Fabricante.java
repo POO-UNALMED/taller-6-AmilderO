@@ -48,4 +48,7 @@ public class Fabricante {
 		}
 		return mayor;
 	}
+	static {
+		new Fabricante("F0", new Pais("P0"));
+	}
 }
