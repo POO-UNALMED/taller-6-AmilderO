@@ -30,13 +30,14 @@ public class Pais {
 	}
 	
 	public static Pais paisMasVendedor() {
-		Pais mayor = paises.get(0);
+		Pais mayor = new Pais("P0");
 		int vmayor = 0;
+		
 		
 		for(int i = 0; i < paises.size(); i++) {
 			int cont = 0;
 			for(int e = 0; e < paises.get(i).fabricantes.size(); e++) {
-				cont += paises.get(i).fabricantes.get(e).getVehiculos();
+				cont = cont + paises.get(i).fabricantes.get(e).getVehiculos();
 			}
 			if(cont > vmayor) {
 				vmayor = cont;
